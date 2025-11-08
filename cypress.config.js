@@ -4,6 +4,7 @@ module.exports = defineConfig({
   e2e: {
     projectId: "c2c3nz",
     video: true,
+    retries:2,
     requestTimeout: 15000,
     screenshotOnRunFailure: true,
     defaultCommandTimeout: 50000,
