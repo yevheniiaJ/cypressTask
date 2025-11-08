@@ -31,7 +31,7 @@ class MainPage {
     }
 
     getHdVoiceText() {
-        return cy.get('div.typography-h2-category-mobile').contains('HD VOICE AI')
+        return cy.get('div.typography-h2-category-mobile',{timeout: 50000}).contains('HD VOICE AI')
     }
 
     getTextToSpeechTab() {

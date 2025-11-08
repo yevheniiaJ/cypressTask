@@ -82,8 +82,7 @@ describe('Main page tests', () => {
             .should('be.disabled')
         MainPage.getNaturalHdBtn()
             .click({ force: true })
-            cy.wait(5000)
-        MainPage.getNaturalHdBtn()
+        MainPage.getNaturalHdBtn().wait(5000)
             .should('be.disabled')
     })
 
