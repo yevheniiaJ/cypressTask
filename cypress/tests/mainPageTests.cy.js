@@ -85,9 +85,8 @@ describe('Main page tests', () => {
         MainPage.getNaturalHdBtn()
             .click({ force: true })
         MainPage.getNaturalHdBtn()
+            .should('be.visible')
             .should('be.disabled')
-        MainPage.getStandartCodecBtn()
-            .click({ force: true })
     })
 
     it('TC #8. Verify navigation to the Sign up page by clicking the "Sign up for free" button', () => {
