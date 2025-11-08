@@ -4,6 +4,12 @@ import SignUpPage from '../pages/signUpPage.js'
 
 describe('Main page tests', () => {
 
+    beforeEach(() => {
+        cy.clearCookies(
+            cy.clearLocalStorage()
+        )
+    })
+
     it('TC #1. Verify sign up flow with invalid data', () => {
         MainPage.open()
         MainPage.signUpBtn().click({ waitForAnimations: false })
