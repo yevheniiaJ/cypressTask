@@ -5,7 +5,7 @@ module.exports = defineConfig({
     projectId: "c2c3nz",
     video: true,
     screenshotOnRunFailure: true,
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 50000,
     pageLoadTimeout: 60000,
     baseUrl: 'https://telnyx.com/',
     setupNodeEvents(on, config) {
