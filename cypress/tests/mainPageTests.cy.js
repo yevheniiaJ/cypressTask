@@ -24,6 +24,7 @@ describe('Main page tests', () => {
             .should('be.visible')
             .click({ force: true })
         cy.request('https://www.linkedin.com/company/telnyx/').then((response) => {
+            cy.wait(5000)
             expect(response.status).to.eq(200)
         })
     })
