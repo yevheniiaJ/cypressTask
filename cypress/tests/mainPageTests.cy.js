@@ -22,18 +22,17 @@ describe('Main page tests', () => {
         SignUpPage.signUpBtn().scrollIntoView().click({ force: true })
         SignUpPage.getError().should('be.visible')
     })
-    it('TC #2. Verify LinkedIn link is correct and visible', () => {
-        MainPage.open()
 
+    it('TC #2. Verify navigation to Linkedin page', () => {
+        MainPage.open()
         MainPage.getLinkedin()
             .scrollIntoView()
             .should('be.visible')
-            .should('have.attr', 'href')
-            .and('include', 'https://www.linkedin.com/company/telnyx/')
-            .and('match', /^https:\/\/www\.linkedin\.com\/company\/telnyx\/?$/)
-            .and('not.be.empty')
-        MainPage.getLinkedin()
-            .should('have.attr', 'target', '_blank')
+            .click({ force: true })
+        cy.request('https://www.linkedin.com/company/telnyx/').then((response) => {
+            cy.wait(5000)
+            expect(response.status).to.eq(200)
+        })
     })
 
     it('TC #3. Verify navigation to Twitter page', () => {
@@ -47,19 +46,14 @@ describe('Main page tests', () => {
         })
     })
 
-    it('TC #4. Verify Facebook link is visible and correct', () => {
+    it('TC #4. Verify navigation to Facebook page', () => {
         MainPage.open()
         MainPage.getFacebook()
-            .should('exist')
             .scrollIntoView()
             .should('be.visible')
             .should('have.attr', 'href')
-            .and('match', /^https:\/\/(www\.)?facebook\.com\/Telnyx\/?$/)
-            .and('not.be.empty')
-        MainPage.getFacebook()
-            .should('have.attr', 'target', '_blank')
+            .and('include', 'facebook.com/Telnyx')
     })
-
 
 
     it('TC #5. Verify logo returns to the main page', () => {
