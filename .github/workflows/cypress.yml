@@ -8,10 +8,6 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false 
-      matrix:
-        containers: [1, 2] 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,7 +17,8 @@ jobs:
         with:
           command: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
           record: true
-          parallel: true 
+          parallel: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CYPRESS_BROWSER_ARGS: --disable-gpu
