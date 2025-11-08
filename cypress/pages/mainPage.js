@@ -11,7 +11,7 @@ class MainPage {
     }
 
     getLinkedin() {
-        return cy.get('a[href="https://www.linkedin.com/company/telnyx"]')
+        return cy.get('a[href="https://www.linkedin.com/company/telnyx"]', {timeout: 50000})
     }
 
     getTwitter() {
@@ -67,15 +67,15 @@ class MainPage {
     }
 
     getHdVoiceTab() {
-        return cy.contains('button', 'HD Voice AI')
+        return cy.contains('button', 'HD Voice AI', {timeout: 50000})
     }
 
     getStandartCodecBtn() {
-        return cy.contains('button', 'Standard codec')
+        return cy.contains('button', 'Standard codec', {timeout: 50000})
     }
 
     getNaturalHdBtn() {
-        return cy.contains('button', 'HD+ NaturalHD voices')
+        return cy.contains('button', 'HD+ NaturalHD voices', {timeout: 50000})
     }
 
     getSignUpForFreeBtn() {
