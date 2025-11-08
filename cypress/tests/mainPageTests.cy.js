@@ -29,8 +29,8 @@ describe('Main page tests', () => {
             .scrollIntoView()
             .should('be.visible')
             .click({ force: true })
-        cy.request('https://www.linkedin.com/company/telnyx/').then((response) => {
             cy.wait(5000)
+        cy.request('https://www.linkedin.com/company/telnyx/').then((response) => {
             expect(response.status).to.eq(200)
         })
     })
@@ -86,9 +86,11 @@ describe('Main page tests', () => {
             .click({ force: true })
         MainPage.getStandartCodecBtn()
             .should('be.disabled')
+            cy.wait(3000)
         MainPage.getNaturalHdBtn()
             .click({ force: true })
-        MainPage.getNaturalHdBtn().wait(5000)
+            cy.wait(3000)
+        MainPage.getNaturalHdBtn()
             .should('be.disabled')
     })
 
