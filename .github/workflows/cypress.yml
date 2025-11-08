@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          command: npx cypress run --record -- rerties 2 --key ${{ secrets.CYPRESS_RECORD_KEY }} 
+          command: npx cypress run --record -- retries 2 --key ${{ secrets.CYPRESS_RECORD_KEY }} 
           record: true
           parallel: true
         env:
