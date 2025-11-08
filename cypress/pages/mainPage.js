@@ -22,21 +22,8 @@ class MainPage {
         return cy.get('a[href="https://www.facebook.com/Telnyx/"]')
     }
 
-
-    getContactUs() {
-        return cy.get('a[href="https://telnyx.com/contact-us"]')
-    }
-
     getLogo() {
         return cy.get('img[alt="Telnyx Logo"]')
-    }
-
-    getChatIcon() {
-        return cy.get('button[class*="rounded-full"]')
-    }
-
-    getChatTitle() {
-        return cy.get('.pt-1')
     }
 
     signUpBtn() {
