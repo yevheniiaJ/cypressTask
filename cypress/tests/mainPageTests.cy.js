@@ -70,6 +70,7 @@ describe('Main page tests', () => {
         MainPage.getSpeechToTextTab().click({ force: true })
         MainPage.getSpeechToText().should('be.visible')
         MainPage.getHdVoiceTab().click({ force: true })
+        cy.wait(5000)
         MainPage.getHdVoiceText().should('be.visible')
     })
 
@@ -84,6 +85,7 @@ describe('Main page tests', () => {
             .should('be.disabled')
         MainPage.getNaturalHdBtn()
             .click({ force: true })
+            cy.wait(5000)
         MainPage.getNaturalHdBtn()
             .should('be.visible')
             .should('be.disabled')
