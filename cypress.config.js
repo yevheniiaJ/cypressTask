@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     retries:2,
-    projectId: "c2c3nz",
+    projectId: "4g6jed",
     video: true,
     requestTimeout: 15000,
     screenshotOnRunFailure: true,
