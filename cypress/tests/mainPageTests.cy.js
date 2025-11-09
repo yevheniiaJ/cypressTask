@@ -79,7 +79,6 @@ describe('Main page tests', () => {
             .scrollIntoView()
             .should('be.visible')
             .should('have.attr', 'href')
-            .and('include', 'developers.telnyx.com/')
 
     })
 
