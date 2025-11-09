@@ -58,7 +58,7 @@ class MainPage {
     }
 
     getExploreBtn() {
-        return cy.contains('span[data-content="Explore Dev Docs"')
+        return cy.contains('a[href="https://developers.telnyx.com"]').last()
     }
 
     getSignUpForFreeBtn() {
