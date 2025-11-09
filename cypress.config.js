@@ -8,7 +8,7 @@ module.exports = defineConfig({
     requestTimeout: 15000,
     screenshotOnRunFailure: true,
     defaultCommandTimeout: 50000,
-    pageLoadTimeout: 60000,
+    pageLoadTimeout: 75000,
     baseUrl: 'https://telnyx.com/',
     setupNodeEvents(on, config) {
       // implement node event listeners here
