@@ -73,16 +73,15 @@ describe('Main page tests', () => {
 
     })
 
-    it('TC #7. Verify switcher in the CHD Voice AI block', () => {
+    it('TC #7. Verify explore dev tools page ', () => {
         MainPage.open()
-        MainPage.getNaturalHdBtn()
+        MainPage.getExploreBtn()
             .scrollIntoView()
-            .should('be.disabled')
-        MainPage.getStandartCodecBtn()
+            .should('be.visible')
+            .invoke('removeAttr', 'target')
             .click({ force: true })
-        MainPage.getStandartCodecBtn()
-            .should('be.disabled')
-            .and('be.visible');
+        cy.url()
+            .should('include', 'https://developers.telnyx.com/')
 
     })
 

@@ -57,12 +57,8 @@ class MainPage {
         return cy.contains('button', 'HD Voice AI', {timeout: 50000})
     }
 
-    getStandartCodecBtn() {
-        return cy.contains('button', 'Standard codec', {timeout: 50000})
-    }
-
-    getNaturalHdBtn() {
-        return cy.contains('button', 'HD+ NaturalHD voices', {timeout: 50000})
+    getExploreBtn() {
+        return cy.contains('span[data-content="Explore Dev Docs"')
     }
 
     getSignUpForFreeBtn() {
