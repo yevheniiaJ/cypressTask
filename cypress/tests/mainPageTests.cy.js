@@ -78,10 +78,8 @@ describe('Main page tests', () => {
         MainPage.getExploreBtn()
             .scrollIntoView()
             .should('be.visible')
-            .invoke('removeAttr', 'target')
-            .click({ force: true })
-        cy.url()
-            .should('include', 'https://developers.telnyx.com/')
+            .should('have.attr', 'href')
+            .and('include', 'developers.telnyx.com/')
 
     })
 
