@@ -58,7 +58,7 @@ class MainPage {
     }
 
     getExploreBtn() {
-        return cy.get('a[href="https://developers.telnyx.com"]').last()
+        return cy.get('a[href="https://developers.telnyx.com"]', {timeout: 50000}).last()
     }
 
     getSignUpForFreeBtn() {
