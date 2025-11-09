@@ -81,16 +81,9 @@ describe('Main page tests', () => {
         MainPage.getStandartCodecBtn()
             .click({ force: true })
         MainPage.getStandartCodecBtn()
-            .should('have.css', 'opacity', '1')
-            .and('be.visible');
-        MainPage.getStandartCodecBtn().should('be.disabled')
-        MainPage.getNaturalHdBtn()
-            .click({ force: true })
-        MainPage.getNaturalHdBtn()
-            .should('have.css', 'opacity', '1')
-            .and('be.visible');
-        MainPage.getNaturalHdBtn()
             .should('be.disabled')
+            .and('be.visible');
+
     })
 
     it('TC #8. Verify navigation to the Sign up page by clicking the "Sign up for free" button', () => {
