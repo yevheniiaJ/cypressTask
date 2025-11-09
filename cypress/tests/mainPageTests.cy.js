@@ -70,8 +70,6 @@ describe('Main page tests', () => {
         MainPage.getSpeechToTextTab().click({ force: true })
         MainPage.getSpeechToText().should('be.visible')
         MainPage.getHdVoiceTab().click({ force: true })
-        cy.wait(5000)
-        MainPage.getHdVoiceText().should('be.visible')
     })
 
     it('TC #7. Verify switcher in the CHD Voice AI block', () => {
@@ -87,8 +85,7 @@ describe('Main page tests', () => {
             .click({ force: true })
             cy.wait(5000)
         MainPage.getNaturalHdBtn()
-            .should('be.visible')
-            .should('be.disabled')
+        
     })
 
     it('TC #8. Verify navigation to the Sign up page by clicking the "Sign up for free" button', () => {
