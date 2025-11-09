@@ -58,7 +58,7 @@ class MainPage {
     }
 
     getExploreBtn() {
-        return cy.contains('a[href="https://developers.telnyx.com"]').last()
+        return cy.get('a[href="https://developers.telnyx.com"]').last()
     }
 
     getSignUpForFreeBtn() {

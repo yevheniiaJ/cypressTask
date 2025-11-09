@@ -73,7 +73,7 @@ describe('Main page tests', () => {
 
     })
 
-    it.only('TC #7. Verify explore dev tools page ', () => {
+    it('TC #7. Verify explore dev tools page ', () => {
         MainPage.open()
         MainPage.getExploreBtn()
             .scrollIntoView()
