@@ -15,7 +15,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          command: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }} 
+          command: npx cypress run --config-file cypress.config.js --record --key ${{ secrets.CYPRESS_RECORD_KEY }} 
           record: true
           parallel: true
         env:
